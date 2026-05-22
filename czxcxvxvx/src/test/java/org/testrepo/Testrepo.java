@@ -43,6 +43,14 @@ public class Testrepo {
 		Assert.assertEquals(driver.getCurrentUrl(), "https://testpages.eviltester.com/reference/");
 	}
 	
+	@Test
+	public void TC002 () {
+		WebElement PageBtn = driver.findElement(By.linkText("Reference Information and Tutorials"));
+		PageBtn.click();
+		Assert.assertEquals(driver.getCurrentUrl(), "https://testpages.eviltester.com/reference/");
+		
+	}
+	
 	@AfterMethod
 	public void tearDown () {
 		driver.quit();
