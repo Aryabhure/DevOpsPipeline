@@ -51,6 +51,14 @@ public class Testrepo {
 		
 	}
 	
+	@Test
+	public void TC003 () {
+		WebElement PageBtn = driver.findElement(By.linkText("Challenges"));
+		PageBtn.click();
+		Assert.assertEquals(driver.getCurrentUrl(), "https://testpages.eviltester.com/challenges/");
+		
+	}
+	
 	@AfterMethod
 	public void tearDown () {
 		driver.quit();
